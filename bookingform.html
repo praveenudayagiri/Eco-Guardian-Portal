@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Environmental Service Booking</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-image: url('slideshowpic1.jpg');
+        background-repeat: no-repeat, no-repeat;
+        background-position: left top, right bottom;
+        background-size: cover, cover;
+    }
+
+    .container {
+        max-width: 500px;
+        margin: 50px auto;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+    }
+
+    h2 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 30px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    select,
+    input[type="date"] {
+        width: calc(100% - 20px);
+        padding: 12px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+        transition: border-color 0.3s ease;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="number"]:focus,
+    select:focus,
+    input[type="date"]:focus {
+        border-color: #66afe9;
+    }
+
+    input[type="submit"] {
+        width: 100%;
+        background-color: #4CAF50;
+        color: white;
+        padding: 15px 20px;
+        margin: 20px 0;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 18px;
+        transition: background-color 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+
+    .footer {
+        text-align: center;
+        margin-top: 30px;
+        color: #666;
+        font-size: 14px;
+    }
+
+    .message {
+        padding: 10px;
+        background-color: #dff0d8;
+        color: #3c763d;
+        border-radius: 5px;
+        margin-top: 20px;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Book Environmental Service</h2>
+    <form action="#" method="post">
+        <input type="text" name="fullname" placeholder="Your Full Name" required>
+        <input type="date" name="dob" placeholder="Date of Birth" required>
+        <select name="gender" required>
+            <option value="" disabled selected>Select Gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+        <input type="email" name="email" placeholder="Your Email Address" required>
+        <input type="text" name="address" placeholder="Your Address" required>
+        <input type="text" name="city" placeholder="City" required>
+        <input type="text" name="state" placeholder="State" required>
+        <select name="serviceType" required>
+            <option value="" disabled selected>Select Service Type</option>
+            <option value="Street Cleaning">Street Cleaning</option>
+            <option value="Park Cleaning">Park Cleaning</option>
+            <option value="Beach Cleaning">Beach Cleaning</option>
+            <option value="River Cleaning">River Cleaning</option>
+            <option value="Planting Trees">Planting Trees</option>
+            <option value="Protesting">Protesting</option>
+            <option value="Helping in Old Age Home">Helping in Old Age Home</option>
+            <!-- Add more options as needed -->
+        </select>
+        <select name="travelMode" required>
+            <option value="" disabled selected>Select Travel Mode</option>
+            <option value="Self">SELF</option>
+            <option value="EGO Bus">EGO Bus</option>
+            <!-- Add more options as needed -->
+        </select>
+        <input type="submit" value="Book Now">
+    </form>
+    <p class="message">Thank you for your booking! We'll contact you shortly with further details.</p>
+    <p class="footer">© 2024 Eco Guardian Portal. All rights reserved.</p>
+</div>
+
+</body>
+</html>

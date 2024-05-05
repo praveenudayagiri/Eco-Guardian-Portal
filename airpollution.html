@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Quality Standards</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .background-container {
+            background-image: url('airpollutionbackgroundpic.jpg'); /* Specify the URL of your background image */
+            background-size: cover;
+            background-position: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.5); /* Adjust the alpha value for transparency */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: rgba(242, 242, 242, 0.5); /* Adjust the alpha value for transparency */
+            font-weight: bold;
+            color: #333;
+        }
+
+        tr td {
+            background-color: rgba(249, 249, 249, 0.5); /* Adjust the alpha value for transparency */
+        }
+
+        .awareness {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .awareness h2 {
+            color: #333;
+        }
+
+        .awareness p {
+            margin-bottom: 10px;
+        }
+
+        .awareness h3 {
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .awareness ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+
+        @media screen and (max-width: 600px) {
+            table {
+                width: 100%;
+            }
+
+            td, th {
+                display: block;
+                padding: 10px;
+            }
+
+            tr {
+                border-bottom: 2px solid #ddd;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="background-container">
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Pollutant</th>
+                    <th>Standard</th>
+                    <th>Concentration (µg/m³ or ppm)</th>
+                    <th>Monitoring Frequency</th>
+                    <th>Monitoring Method</th>
+                </tr>
+            </thead>
+           
+        
+            <tr>
+                <td>Sulphur Dioxide (SO2)</td>
+                <td>Annual Average</td>
+                <td>30 ppb</td>
+                <td>At least twice a week, 24-hourly</td>
+                <td>High volume sampler, Gaseous samplers</td>
+            </tr>
+            <tr>
+                <td>Nitrogen Dioxide (NO2)</td>
+                <td>Annual Average</td>
+                <td>53 ppb</td>
+                <td>At least twice a week, 24-hourly</td>
+                <td>High volume sampler, Gaseous samplers</td>
+            </tr>
+            <tr>
+                <td>Particulate Matter (PM10)</td>
+                <td>Annual Average</td>
+                <td>50 µg/m³</td>
+                <td>At least twice a week, 24-hourly</td>
+                <td>High volume sampler</td>
+            </tr>
+            <tr>
+                <td>Particulate Matter (PM2.5)</td>
+                <td>Annual Average</td>
+                <td>12 µg/m³</td>
+                <td>At least twice a week, 24-hourly</td>
+                <td>High volume sampler</td>
+            </tr>
+            <tr>
+                <td>Ozone (O3)</td>
+                <td>8-Hour Average</td>
+                <td>70 ppb</td>
+                <td>Continuous</td>
+                <td>Chemiluminescence, UV Absorption</td>
+            </tr>
+            <tr>
+                <td>Carbon Monoxide (CO)</td>
+                <td>8-Hour Average</td>
+                <td>9 ppm</td>
+                <td>Continuous</td>
+                <td>Non-dispersive Infrared (NDIR)</td>
+            </tr>
+            <tr>
+                <td>Ammonia (NH3)</td>
+                <td>Annual Average</td>
+                <td>0.03 ppm</td>
+                <td>Continuous</td>
+                <td>Chemiluminescence, Nesslerization, Ion Chromatography</td>
+            </tr>
+            <tr>
+                <td>Lead</td>
+                <td>Quarterly Average</td>
+                <td>0.15 µg/m³</td>
+                <td>Continuous</td>
+                <td>Atomic Absorption Spectrometry</td>
+            </tr>
+            <tr>
+                <td>Benzene (C6H6)</td>
+                <td>1-Hour Average</td>
+                <td>5 µg/m³</td>
+                <td>Continuous</td>
+                <td>Gas Chromatography-Mass Spectrometry</td>
+            </tr>
+            <tr>
+                <td>Benzo(a)Pyrene (BaP)</td>
+                <td>Annual Average</td>
+                <td>1 ng/m³</td>
+                <td>Continuous</td>
+                <td>High-Performance Liquid Chromatography</td>
+            </tr>
+            <tr>
+                <td>Arsenic (As)</td>
+                <td>Annual Average</td>
+                <td>6 ng/m³</td>
+                <td>Continuous</td>
+                <td>Atomic Absorption Spectrometry</td>
+            </tr>
+            <tr>
+                <td>Nickel (Ni)</td>
+                <td>Annual Average</td>
+                <td>20 ng/m³</td>
+                <td>Continuous</td>
+                <td>Atomic Absorption Spectrometry</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="awareness">
+    <h2>Air Pollution Awareness</h2>
+    <p>Air pollution is the presence of harmful or excessive quantities of substances including gases, particulates, and biological molecules in the air. It can cause various health problems and harm the environment.</p>
+    
+    <h3>Causes of Air Pollution</h3>
+    <ul>
+        <li>Vehicle emissions: Emissions from vehicles, including cars, trucks, and buses, contribute significantly to air pollution, releasing pollutants such as carbon monoxide, nitrogen oxides, and particulate matter.</li>
+        <li>Industrial activities: Factories and manufacturing processes emit various pollutants into the air, including sulfur dioxide, nitrogen oxides, and volatile organic compounds.</li>
+        <li>Burning of fossil fuels: The burning of fossil fuels, such as coal, oil, and natural gas, for energy production, transportation, and heating, releases pollutants such as carbon dioxide, sulfur dioxide, and particulate matter.</li>
+        <!-- Add more causes -->
+    </ul>
+    
+    <h3>Effects of Air Pollution</h3>
+    <ul>
+        <li>Respiratory diseases: Exposure to air pollution can lead to respiratory diseases such as asthma, chronic obstructive pulmonary disease (COPD), and lung cancer.</li>
+        <li>Global warming: Air pollutants such as carbon dioxide contribute to global warming and climate change, leading to rising temperatures, melting ice caps, and more frequent extreme weather events.</li>
+        <li>Damage to wildlife: Air pollution can harm wildlife populations and ecosystems, leading to habitat destruction, biodiversity loss, and negative impacts on animal health.</li>
+        <!-- Add more effects -->
+    </ul>
+    
+    <h3>Practices for Reducing Air Pollution</h3>
+    <ul>
+        <li>Use public transportation or carpooling: Reduce vehicle emissions by using public transportation, carpooling with others, or biking or walking for short trips.</li>
+        <li>Switch to clean energy sources: Transition to clean energy sources such as solar, wind, and hydropower to reduce reliance on fossil fuels and decrease air pollution from energy production.</li>
+        <li>Reduce, reuse, and recycle: Reduce waste and conserve resources by practicing the three Rs: reduce, reuse, and recycle. Choose reusable products, recycle materials such as paper, glass, and plastic, and minimize single-use items.</li>
+        <!-- Add more practices -->
+    </ul>
+    
+    <p>As responsible citizens, it's essential to take actions to reduce air pollution and protect our planet and health.</p>
+</div>
+
+</body>
+</html>

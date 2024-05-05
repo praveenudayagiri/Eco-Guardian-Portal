@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Complaint Form</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-image: url('slideshowpic4.jpg');
+        background-size: cover;
+        background-position: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 600px;
+        margin: 50px auto;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        padding: 30px;
+    }
+
+    h2 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 30px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select,
+    textarea {
+        width: calc(100% - 24px);
+        padding: 12px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+        box-sizing: border-box;
+        transition: border-color 0.3s ease;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="tel"]:focus,
+    select:focus,
+    textarea:focus {
+        border-color: #66afe9;
+    }
+
+    label {
+        font-weight: bold;
+    }
+
+    select {
+        cursor: pointer;
+    }
+
+    textarea {
+        height: 120px;
+        resize: vertical;
+    }
+
+    input[type="file"] {
+        margin-bottom: 20px;
+    }
+
+    input[type="submit"] {
+        width: 100%;
+        background-color: #4CAF50;
+        color: white;
+        padding: 15px 20px;
+        margin-top: 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 18px;
+        transition: background-color 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Complaint Form</h2>
+    <form action="#" method="post">
+        <div style="display: flex; justify-content: space-between;">
+            <input type="text" name="firstname" placeholder="First Name" required>
+            <input type="text" name="lastname" placeholder="Last Name" required>
+        </div>
+        <div style="display: flex; justify-content: space-between;">
+            <input type="email" name="email" placeholder="Email Address" required>
+            <input type="tel" name="phone" placeholder="Phone Number" required>
+        </div>
+        <label for="pollution-type">Type of Pollution:</label>
+        <select id="pollution-type" name="pollution-type">
+            <option value="Air Pollution">Air Pollution</option>
+            <option value="Water Pollution">Water Pollution</option>
+            <option value="Land Pollution">Land Pollution</option>
+            <option value="Noise Pollution">Noise Pollution</option>
+            <option value="Others">Others</option>
+        </select>
+        <input type="text" name="location" placeholder="Location" required>
+        <textarea name="complaint" rows="6" placeholder="Write your complaint here..." required></textarea>
+        <input type="file" name="photos" accept="image/*">
+        <input type="submit" value="Submit Complaint">
+    </form>
+</div>
+
+</body>
+</html>

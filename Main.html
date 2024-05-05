@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Top Board</title>
+    <style>
+.scrolling-text {
+            background-color: red;
+            padding: 10px;
+            display: inline-block;
+            position: absolute;
+            top: 100px; /* Adjust vertical position to avoid overlap */
+            left: 0;
+            //width: 100%; /* Ensure full width */
+            z-index: 0; /* Set a lower z-index so it's behind the menu */
+        }
+        .image-container {
+            display: flex;
+        }
+
+        .image-container img {
+            margin-right: 10px; /* Adjust spacing between images */
+        }
+ /* Positioning the text at specific coordinates */
+        .text1 {
+            position: absolute;
+            top: 20px; /* Adjust the top position */
+            left: 250px; /* Adjust the left position */
+        }
+.text2 {
+            position: absolute;
+            top: 55px; /* Adjust the top position */
+            left: 265px; /* Adjust the left position */
+        }
+	/*drop down menu CSS*/
+	*{
+		margin: 0px;
+		padding: 0px;
+	}
+	ul {
+		list-style-type: none;
+		position: absolute;
+    		top: 150px; /* Adjust to create space between menu and scrolling text */
+    		left: 0;
+	}
+	ul li{
+		float: left;
+		width: 307px;
+		height: 35px;
+		background-color: #00bfff;
+		text-align: center;
+		line height:5px;
+		 position: relative;
+		}
+	ul li a{
+	text-decoration: none;
+	display: block;
+	color: black;
+	font-size: 30px;
+	text-align: center;
+	}
+	ul li a:hover{
+		background-color: black;
+		color: white;
+	}
+	ul li ul {
+            display: none;
+            position: absolute;
+		top: 100%;
+            width: 200px;
+		text-align: center;
+		z-index: 999;
+        }
+        ul li:hover ul {
+            display: block;
+        }
+        ul li ul li {
+            float: none;
+        }
+
+ /* Style for the sky-blue button */
+        .sky-blue-button {
+            background-color: #00bfff; /* Sky-blue color */
+            border: none; /* Remove default border */
+            color: white; /* Text color */
+            //padding: 10px 40px; /* Padding around text */
+            text-align: center; /* Center text horizontally */
+            text-decoration: none; /* Remove underline */
+            display: inline-block; /* Display as inline block */
+            font-size: 16px; /* Font size */
+            border-radius: 5px; /* Curved edges */
+            cursor: pointer; /* Cursor style */
+            transition: background-color 0.3s; /* Smooth transition */
+        }
+
+        /* Style for hover effect */
+        .sky-blue-button:hover {
+            background-color: black; /* Darker sky-blue color on hover */
+        }
+#button1 {
+            position: absolute;
+            top: 315px;
+            left: 1px;
+		padding: 10px 10px;
+        }
+
+        /* Custom position for button with id="button2" */
+        #button2 {
+            position: absolute;
+            top: 358px;
+            left: 1px;
+		padding: 10px 10px;
+        }
+
+        /* Custom position for button with id="button3" */
+        #button3 {
+            position: absolute;
+            top: 401px;
+            left: 1px;
+		padding: 10px 49px;
+        }
+#button4 {
+            position: absolute;
+            top: 443px;
+            left: 1px;
+		padding: 10px 25px;
+        }
+#button5 {
+            position: absolute;
+            top: 486px;
+            left: 1px;
+		padding: 10px 26px;
+        }
+#button6 {
+            position: absolute;
+            top: 529px;
+            left: 1px;
+		padding: 10px 35px;
+        }
+
+body {
+        margin: 0;
+        padding: 0;
+    }
+
+   .container {
+        position: absolute;
+        top: 26%;
+        left: 0%;
+        background-color: yellow;
+        padding: 20px;
+    }
+
+    .text {
+        font-weight: bold;
+        font-size: 24px; /* Customize font size as needed */
+        text-align: center;
+	
+    }
+.fa {
+  padding: 15px;
+  font-size: 30px;
+  width: 25px; /* Button width */
+  height: 25px; /* Button height */
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  position: absolute; /* Added position property */
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+/* Define background colors for different social media buttons */
+.fa-twitter { background: #55ACEE; color: white; }
+.fa-instagram { background: #125688; color: white; }
+.fa-youtube { background: #bb0000; color: white; }
+.fa-facebook { background: #3B5998; color: white; }
+
+  /* Style for the slideshow container */
+.slideshow-container {
+    position: absolute;
+    top: 315px;
+    left: 47.5%;
+    transform: translateX(-50%);
+    width: 1025px;
+    height: 400px; /* Increase height for better visibility */
+    overflow: hidden; /* Hide overflow to ensure images stay within container */
+    border: 2px solid #ccc; /* Add a border */
+    border-radius: 0px; /* Add rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+/* Style for slideshow images */
+.slideshow-image {
+    width: 100%;
+    height: 100%; /* Fill the entire container */
+    object-fit: cover; /* Ensure images cover the entire space */
+    transition: opacity 0.5s ease-in-out; /* Add a smooth transition */
+}
+
+/* Style for the active slide */
+.slideshow-slide-active {
+    opacity: 1; /* Make the active slide fully visible */
+}
+
+/* Style for the slideshow caption */
+.slideshow-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+}
+
+/* Style for the navigation buttons */
+.slideshow-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+.slideshow-nav-prev {
+    left: 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.slideshow-nav-next {
+    right: 0;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+/* Style for the navigation button icons */
+.slideshow-nav-icon {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Style for the navigation buttons on hover */
+.slideshow-nav:hover {
+    background-color: rgba(0, 0, 0, 0.7); /* Darken the background on hover */
+}
+
+ /* Scope styles specifically to the emergency call to action button */
+        .cta-container {
+            position: fixed;
+            bottom: 20px;
+            right: 1400px;
+            z-index: 999; /* Ensure the button appears on top of other content */
+        }
+
+        .cta-button {
+            width: 125px;
+            height: 125px;
+            border-radius: 50%;
+            background-color: #ff3333; /* Red background color */
+            color: #fff;
+            font-size: 13px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 130px;
+            text-transform: uppercase;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #cc0000; /* Darker red on hover */
+        }
+
+
+        /* Styles for the container */
+        .updates-container {
+            position: fixed;
+            top: 330px; /* Adjust top position */
+            right: 80px; /* Adjust right position */
+            width: 150px; /* Adjust width */
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Styles for the heading */
+        .updates-heading {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+            text-transform: uppercase;
+        }
+
+        /* Styles for the list */
+        .updates-list {
+            list-style: none;
+            padding: 5;
+            margin: 0;
+        }
+
+        /* Styles for list items */
+        .updates-list li {
+            margin-bottom: 5px;
+            font-size: 20px;
+            color: #333;
+        }
+
+        /* Styles for links */
+        .updates-list li a {
+            text-decoration: none;
+            color: #333;
+            transition: color 0.3s ease;
+        }
+
+        .updates-list li a:hover {
+            color: #555;
+        }
+
+
+</style>
+</head>
+<body>
+    <div class="image-container">
+        <img src="topboardpic1.jpg" alt="Image" width="100" height="100">
+        <img src="topboardpic2.png" alt="Image" width="100" height="100">
+
+</div>
+<!-- Text positioned at specific coordinates -->
+    <div class="text1">
+        <h1>Eco Guardain Portal</h1><br>
+    </div>
+<div class="text2">
+        <h3>Uniting for a Sustainable Future</h3>
+    </div>
+</ul>
+<div class="scrolling-text">
+    <marquee behavior="scroll" direction="left">DATE&TIME : 26 APRIL @ 07:30 ::WHEATHER : SUNNY :: STATES:  44<sup>0</sup>c ::TELANGANA 46<sup>0</sup>c ::KERLA 32<sup>0</sup>c ::MADYA PRADESH 45<sup>0</sup>c ::NEPAL 28<sup>0</sup>c ::TAMIL NADU 43<sup>0</sup>c ::ARRUNACHAL PRADESH 44<sup>0</sup>c ::PUNJAB 42<sup>0</sup>c : </marquee>
+</div>
+<ul>
+  <!-- Add a specific class to the Home button -->
+  <li><a href=>HOME</a></li>
+	<li><a href="egpactivites.html">EPG'S ACTIVTIES</a></li>
+  <li><a href=>STANDARDS</a>
+	<ul>
+	<li><a href="airpollution.html">AIR STANDARDS</a></li>
+	<li><a href="waterpollution.html">WATER STANDARDS</a></li>
+	<li><a href="soilpollution.html">SOIL STANDARDS</a></li>
+	<li><a href="soundpollution.html">NOISE STANDARDS</a></li>
+</ul>
+</li>
+  <li><a href="foundationpage.html">ABOUT EGP</a></li>
+<li><a href="contactus.html">CONTACT US</a></li>
+</ul>
+<button id="button1" class="sky-blue-button" onclick="openHtmlFile('enviornmentalacts.html')">ENIVIRONMENTAL ACT'S</button>
+<button id="button2" class="sky-blue-button"  onclick="openHtmlFile('complaintform.html')">POLLUTION COMPLAINT</button>
+<button id="button3" class="sky-blue-button"  onclick="openHtmlFile('donationform.html')">DONATE NOW</button>
+<button id="button4" class="sky-blue-button"  onclick="openHtmlFile('bookingform.html')">CAMPAIGN WITH US</button>
+<button id="button5" class="sky-blue-button"  onclick="openHtmlFile('sucessstories.html')">SUCCESS STORIES</button>
+<button id="button6" class="sky-blue-button"  onclick="openHtmlFile('webinardetails.html')">FREE WEBINARS</button>
+<div class="container">
+    <div class="text">
+        Welcome to the Eco Guardian portal, where environmental stewardship meets governmental collaboration. Our platform is dedicated to empowering individuals and organizations with the knowledge and resources needed to combat pollution and uphold environmental standards. From enforcing regulations to fostering sustainable practices, we're here to guide you on the path towards a cleaner, greener future.
+    </div>
+</div>
+<!-- Add font awesome icons for Twitter, Instagram, YouTube, Facebook -->
+<a href="#" class="fa fa-twitter" style="top: 310px; left: 1475px;"></a>
+<a href="#" class="fa fa-instagram" style="top: 375px; left: 1475px;"></a>
+<a href="#" class="fa fa-youtube" style="top: 440px; left: 1475px;"></a>
+<a href="#" class="fa fa-facebook" style="top: 505px; left: 1475px;"></a>
+
+<!-- Your existing code for images, scrolling text, menu, buttons, etc. -->
+
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+        <div class="slideshow-slide">
+        <a href="wateractbill.html">
+            <img class="slideshow-image" src="wateract.jpg" alt="Slide 1">
+		<div class="slideshow-caption">The Water (Prevention and Control of Pollution) Amendment Bill, 2024 was tabled in the Rajya Sabha.</div> <!-- Add caption here -->
+        </a>
+        </a>
+        </div>
+    <!-- Slide 2 -->
+    <div class="slideshow-slide">
+        <a href="plasticpollution.html">
+            <img class="slideshow-image" src="plasticpollutionpic.jpg" alt="Slide 2">
+		 <div class="slideshow-caption">Plastic Pollution on Course to Double by 2030
+</div> 
+        </a>
+    </div>
+    <!-- Slide 3 -->
+    <div class="slideshow-slide">
+        <a href="delhipollutionpage.html">
+            <img class="slideshow-image" src="delhipollution.jpg" alt="Slide 3">
+		<div class="slideshow-caption">Delhi Air Pollution Even Worse Than We Thought- WHO</div>
+        </a>
+    </div>
+    </div>
+<!-- Container for the call to action button -->
+<div class="cta-container">
+    <div class="cta-button">Call to action</div>
+</div>
+<!-- Container for the latest updates -->
+<div class="updates-container">
+    <h2 class="updates-heading">Latest Updates</h2>
+    <ol class="updates-list">
+        <li><a href="wateractbill.html">Update 1: The Water Amendment Bill.</a></li>
+        <li><a href="plasticpollution.html">Update 2: Plastic Pollution on Course to Double by 2030</a></li>
+        <li><a href="delhipollutionpage.html">Update 3: Delhi Air Pollution Even Worse Than We Thought- WHO</a></li>
+  
+        <!-- Add more updates as needed -->
+    </ol>
+</div>
+
+</body>
+
+<!-- JavaScript function to open HTML files -->
+<script>
+    function openHtmlFile(filename) {
+        window.location.href = filename; // Navigate to the specified HTML file
+    }
+// Add event listeners to the social media buttons
+document.querySelector(".fa-twitter").addEventListener("click", function() {
+    // Open Twitter page in a new tab/window
+    window.open("https://twitter.com/");
+});
+
+document.querySelector(".fa-instagram").addEventListener("click", function() {
+    // Open Instagram page in a new tab/window
+    window.open("https://www.instagram.com/");
+});
+
+document.querySelector(".fa-youtube").addEventListener("click", function() {
+    // Open YouTube page in a new tab/window
+    window.open("https://www.youtube.com/");
+});
+
+document.querySelector(".fa-facebook").addEventListener("click", function() {
+    // Open Facebook page in a new tab/window
+    window.open("https://www.facebook.com/");
+});
+
+function openHtmlFile(filename) {
+        window.location.href = filename; // Navigate to the specified HTML file
+    }
+
+    var slideIndex = 0;
+    carousel();
+
+    function carousel() {
+        var i;
+        var slides = document.getElementsByClassName("slideshow-slide");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}    
+        slides[slideIndex-1].style.display = "block";  
+
+        // Display captions
+        var captions = document.getElementsByClassName("slideshow-caption");
+        for (i = 0; i < captions.length; i++) {
+            captions[i].style.display = "none";
+        }
+        captions[slideIndex-1].style.display = "block";
+
+        setTimeout(carousel, 2000); // Change image every 2 seconds
+    }
+</script>
+
+</html>
